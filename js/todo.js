@@ -1,3 +1,14 @@
+'use strict';
+const date = document.querySelector('.date');
+const day = document.querySelector('.day');
+const now = new Date();
+let options = { weekday: 'long' };
+day.textContent = new Intl.DateTimeFormat('en-GB', options).format(now);
+date.textContent = new Intl.DateTimeFormat('en-GB').format(now);
+const todoList = document.querySelector('.todoList');
+const clear = document.querySelector('.clear');
+const input = document.querySelector('input');
+const counter = document.querySelector('.counter');
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
