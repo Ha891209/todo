@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+    <h1>Daily To-Do list Manager</h1>
+    <main>
+    <header>
+        <h2 class="day"></h2>
+        <h2 class="date"></h2>
+    </header>
+    <div class="header">
+        <input type="text" id="myInput" placeholder="Take the garbage out">
+        <span onclick="newElement()" class="addBtn">+</span>
+      </div>
+        <ul id="myUL"></ul>
+        <p>You have <span class="counter">0</span> pending items</p>
+        <div class="todoList"></div>
+        <footer>
+            <a href="">Show Complete</a>
+            <a class="clear" href="">Clear All</a>            
+        </footer>
+    </main>
+
+    <script src="js/todo.js"></script>
+</body>
+</html>
