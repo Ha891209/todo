@@ -56,6 +56,17 @@ ul li.checked::before {
   width: 7px;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+input {
+  border-radius: 5px;
+  height: 2.5rem;
+  flex-grow: 5;
+  margin-right: 1rem;
+}
 /* Style the close button */
 .close {
   position: absolute;
@@ -67,21 +78,6 @@ ul li.checked::before {
 .close:hover {
   background-color: #f44336;
   color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: #dbd9d9;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 body {
@@ -119,13 +115,13 @@ input {
 }
 
 .addBtn {
-  background-color: rgb(187, 187, 187);
+  background-color: rgb(184, 184, 184);
   border-radius: 5px;
   color: white;
+  flex-grow: 1;
   font-size: 2rem;
   height: 2.5rem;
-  margin: 1rem;
-  width: 5rem;
+  text-align: center;
 }
 
 .addBtn:hover {
