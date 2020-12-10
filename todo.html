@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do</title>
     <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1>Daily To-Do list manager</h1>
@@ -18,8 +19,12 @@
         <span onclick="newElement()" class="addBtn">+</span>
       </div>
         <ul id="myUL"></ul>
-        <p>You have <span class="counter">0</span> pending items</p>
-        <div class="todoList"></div>
+        <p>You have <span class="todo-counter"></span> pending items</p>
+        <div class="todo__list"></div>
+        <div class="todo__complete">
+            <p>Completed tasks: <span class="todo__doneCounter"></span>%</p>
+            <div class="todo__doneList"></div>
+        </div>
         <footer>
             <a href="">Show Complete</a>
             <a class="clear" href="">Clear All</a>            

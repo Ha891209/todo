@@ -127,4 +127,32 @@ input {
 .addBtn:hover {
   background-color: rgb(87, 43, 247);
 }
+.red {
+  background-color: red;
+  border-radius: 0 5px 5px 0;
+  display: none;
+  height: 48px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48px;
+}
+​
+.block {
+  background-color: red;
+  border-radius: 0 5px 5px 0;
+  display: block;
+  height: 48px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48px;
+}
 
+.todoElement .block {
+  visibility: hidden;
+}
+​
+.todoElement.hovered .block {
+  visibility: visible;
+}
