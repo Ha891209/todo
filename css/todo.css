@@ -1,83 +1,5 @@
-/* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
-}
-
-/* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
-
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
-.header {
-  display: flex;
-  flex-direction: row;
-}
-
-input {
-  border-radius: 5px;
-  height: 2.5rem;
-  flex-grow: 5;
-  margin-right: 1rem;
-}
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
 }
 
 body {
@@ -100,46 +22,103 @@ main {
 }
 
 .date, .day {
-  color: #fc3873;
+  color:#eb8282;
+}
+
+.todo__input {
+  display: flex;
+  flex-direction: row;
 }
 
 input {
   border-radius: 5px;
   height: 2.5rem;
+  flex-grow: 5;
+  margin-right: 1rem;
 }
 
-::placeholder{
+::placeholder {
   color: #808080;
   font-size: 1rem;
   font-style: italic;
 }
 
-.addBtn {
+.todo__done{
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.todoDiv,
+.todoDoneDiv {
+  animation: todoDiv 0.7s;
+  background-color: rgb(183, 191, 204);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  height: 48px;
+  margin: 1rem 0;
+  position: relative;
+  
+}
+
+.todoDoneDiv {
+  background-color: #eb8282;
+  text-decoration: line-through;
+}
+
+@keyframes todoDiv {
+  0% {
+      left: 100px;
+  }
+
+  100% {
+      left: 0px;
+  }
+}
+
+.plus {
   background-color: rgb(184, 184, 184);
   border-radius: 5px;
   color: white;
   flex-grow: 1;
   font-size: 2rem;
   height: 2.5rem;
-  text-align: center;
 }
 
-.addBtn:hover {
+.plus:hover {
   background-color: rgb(87, 43, 247);
 }
-.red {
-  background-color: red;
-  border-radius: 0 5px 5px 0;
+
+.hide {
   display: none;
-  height: 48px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 48px;
 }
-​
-.block {
-  background-color: red;
+
+@keyframes redDiv {
+  0% {
+      right: -30px;
+      opacity: 0;
+  }
+
+  100% {
+      right: 0px;
+      opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+      right: 0px;
+  }
+
+  100% {
+      right: 100px;
+  }
+}
+
+.appearRed {
+  animation: redDiv 0.7s;
+  background-color: #eb8282;
   border-radius: 0 5px 5px 0;
   display: block;
   height: 48px;
@@ -147,12 +126,28 @@ input {
   right: 0;
   top: 0;
   width: 48px;
+  
 }
 
-.todoElement .block {
-  visibility: hidden;
+i {
+  color: #ffffff;
+  padding: 15px;
 }
-​
-.todoElement.hovered .block {
-  visibility: visible;
+
+footer {
+  text-align: center;
+}
+
+footer button,
+footer button:hover,
+footer button:active,
+footer button:visited {
+  background-color:#eb8282;
+  border: 0;
+  border-radius: 5px;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem;
+  text-decoration: none;
 }

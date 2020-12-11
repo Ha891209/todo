@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do</title>
-    <link rel="stylesheet" href="css/todo.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/todo.css">
+
 </head>
 <body>
     <h1>Daily To-Do list manager</h1>
     <main>
-    <header>
-        <h2 class="day"></h2>
-        <h2 class="date"></h2>
-    </header>
-    <div class="header">
-        <input type="text" id="myInput" placeholder="Take the garbage out">
-        <span onclick="newElement()" class="addBtn">+</span>
-      </div>
-        <ul id="myUL"></ul>
-        <p>You have <span class="todo-counter"></span> pending items</p>
+        <header>
+            <h2 class="day"></h2>
+            <h2 class="date"></h2>
+        </header>
+        <div class="todo__input">
+            <input type="text" placeholder="Take the garbage out">
+            <button class="plus">+</button>
+        </div>
+        <p>You have <span class="todo__counter">0</span> pending items</p>
+        <div class="todo__done">            
+            <img src="" alt="">
+            <p>Time to chill! You have no todos.</p>
+        </div>
         <div class="todo__list"></div>
         <div class="todo__complete">
-            <p>Completed tasks: <span class="todo__doneCounter"></span>%</p>
+            <p>Completed tasks: <span class="done__counter">0</span>%</p>
             <div class="todo__doneList"></div>
         </div>
         <footer>
-            <a href="">Show Complete</a>
-            <a class="clear" href="">Clear All</a>            
+            <button class="todo__hide">Hide Complete</button>
+            <button class="todo__clear">Clear All</button>
+
         </footer>
     </main>
     <script src="js/todo.js"></script>
