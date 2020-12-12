@@ -1,3 +1,5 @@
+'use strict';
+
 const day = document.querySelector('.day');
 const date = document.querySelector('.date');
 
