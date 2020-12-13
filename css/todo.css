@@ -1,154 +1,109 @@
 * {
-  box-sizing: border-box;
-}
-
-body {
-  background:linear-gradient(#fc3873,#eb8282);
-  height: 100vh;
-}
-
-h1{
-color: #ffffff;
-text-align: center;
-}
-
-main {
-  background-color: #dbd9d9;
-  border-radius: 5px;    
-  margin: 2rem auto;
-  max-width: 450px;
-  padding: 3rem;
-  position: relative;
-}
-
-.date, .day {
-  color:#eb8282;
-}
-
-.todo__input {
-  display: flex;
-  flex-direction: row;
-}
-
-input {
-  border-radius: 5px;
-  height: 2.5rem;
-  flex-grow: 5;
-  margin-right: 1rem;
-}
-
-::placeholder {
-  color: #808080;
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.todo__done{
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin: 4rem 0;
-  text-align: center;
+    box-sizing: border-box;
+  }
   
-}
-
-.todoDiv,
-.todoDoneDiv {
-  animation: todoDiv 0.7s;
-  background-color: rgb(183, 191, 204);
-  border-radius: 5px;
-  font-size: 1.5rem;
-  height: 48px;
-  margin: 1rem 0;
-  position: relative;
+  body {
+    background:linear-gradient(#fc3873,#eb8282);
+    height: 100vh;
+  }
   
-}
-
-.todoDoneDiv {
-  background-color: #eb8282;
-  text-decoration: line-through;
-}
-
-@keyframes todoDiv {
-  0% {
-      left: 100px;
-  }
-
-  100% {
-      left: 0px;
-  }
-}
-
-.plus {
-  background-color: rgb(184, 184, 184);
-  border-radius: 5px;
-  color: white;
-  flex-grow: 1;
-  font-size: 2rem;
-  height: 2.5rem;
-}
-
-.plus:hover {
-  background-color: rgb(87, 43, 247);
-}
-
-.hide {
-  display: none;
-}
-
-@keyframes redDiv {
-  0% {
-      right: -30px;
-      opacity: 0;
-  }
-
-  100% {
-      right: 0px;
-      opacity: 1;
-  }
-}
-
-@keyframes hide {
-  0% {
-      right: 0px;
-  }
-
-  100% {
-      right: 100px;
-  }
-}
-
-.appearRed {
-  animation: redDiv 0.7s;
-  background-color: #eb8282;
-  border-radius: 0 5px 5px 0;
-  display: block;
-  height: 48px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 48px;
-  
-}
-
-i {
+  h1{
   color: #ffffff;
-  padding: 15px;
-}
-
-footer {
   text-align: center;
-}
+  }
+  main {
+    background-color: #dbd9d9;
+    border-radius: 5px;    
+    margin: 2rem auto;
+    max-width: 450px;
+    padding: 3rem;
+    position: relative;
+  }
+  
+  .body__day, .body__date {
+    color:#eb8282;
+  }
+  
+  .todo__input {
+    display: flex;
+    flex-direction: row;
+  }
+  input {
+    border-radius: 5px;
+    height: 2.5rem;
+    flex-grow: 5;
+    margin-right: 1rem;
+  }
+  
+  ::placeholder {
+    color: #808080;
+    font-size: 1rem;
+    font-style: italic;
+  }
 
-footer button,
-footer button:hover,
-footer button:active,
-footer button:visited {
-  background-color:#eb8282;
-  border: 0;
-  border-radius: 5px;
-  color: black;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 1rem;
-  text-decoration: none;
-}
+  .todo__list--done{
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 4rem 0;
+    text-align: center;
+    
+  }
+  
+  .todoDiv,
+  .todo__list--doneDiv {
+    animation: todoDiv 0.7s;
+    background-color: rgb(183, 191, 204);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    height: 48px;
+    margin: 1rem 0;
+    position: center;
+    
+  }
+  
+  .todoDoneDiv {
+    background-color: #eb8282;
+    text-decoration: line-through;
+  }
+  
+  @keyframes todoDiv {
+    0% {
+        left: 100px;
+    }
+  
+    100% {
+        left: 0px;
+    }
+  }
+  
+  .plus {
+    background-color: rgb(184, 184, 184);
+    border-radius: 5px;
+    color: white;
+    flex-grow: 1;
+    font-size: 2rem;
+    height: 2.5rem;
+  }
+  
+  .plus:hover {
+    background-color: rgb(87, 43, 247);
+  }
+    
+  .todo__footer {
+    text-align: center;
+  }
+  
+  .todo__footer button,
+  .todo__footer button:hover,
+  .todo__footer button:active,
+  .todo__footer button:visited {
+    background-color:#eb8282;
+    border: 0;
+    border-radius: 5px;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+    text-decoration: none;
+  }
+  
