@@ -8,46 +8,22 @@
     <link rel="stylesheet" href="css/todo.css">
 </head>
 <body>
-    <h1>Daily To-Do list manager</h1>
-    <main>
-        <header>
-    <div class="container">
-        <h3 class="body__day">Tuesday</h3>
-        <h3 class="body__date">2020-12-10</h3>
-    </header>
-     
-        <div class="todo__input">
-            <input  class ="input" type="text" placeholder="Take the garbage out">
-            <button class="plus">+</button>
+    <div class="list__container">
+        <h2>Daily To-Do list manager</h2>
+        <div class="current__day"></div>
+        <div class="current__date"></div>
+        <div class="list__header">
+            <input type="text" class="input__field" placeholder="Take the garbage out">
+            <button class="add__button">+</button>
         </div>
-    
-    
-        <p>You have 
-            <span class="todo__number">0</span> 
-            pending items
-        </p>
-    
-      
-        <div class="todo__list--pending">
-        </div>
-        
-        <div class="todo__list--done">         
-            <span class="emoji">🍻</span>
-            <p>Time to chill! You have no todos.</p>
-            </div>
-    
-        <div class="todo__complete">
-            <p>Completed tasks: <span class="done__counter">0</span>%</p>
-            <div class="todo__doneList"></div>
-        </div>
-
-        <div class="todo__footer">
-            <button class="footer__btn--hide">
-                Hide Complete
-            </button>
-            <button class="footer__btn--clear">
-                Clear All
-            </button>
+        <div class="error"></div>
+        <div class="pending__items"></div>
+        <ul class="list"></ul>
+        <div class="completed__tasks"></div>
+        <ul class="list__completed"></ul>
+        <div class="buttons">
+            <button class="show__button">Show Complete</button>
+            <button class="clear__button">Clear All</button>
         </div>
     </div>
 

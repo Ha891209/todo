@@ -1,109 +1,157 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background:linear-gradient(#fc3873,#eb8282);
-    height: 100vh;
-  }
-  
-  h1{
-  color: #ffffff;
-  text-align: center;
-  }
-  main {
-    background-color: #dbd9d9;
-    border-radius: 5px;    
-    margin: 2rem auto;
-    max-width: 450px;
-    padding: 3rem;
-    position: relative;
-  }
-  
-  .body__day, .body__date {
-    color:#eb8282;
-  }
-  
-  .todo__input {
-    display: flex;
-    flex-direction: row;
-  }
-  input {
-    border-radius: 5px;
-    height: 2.5rem;
-    flex-grow: 5;
-    margin-right: 1rem;
-  }
-  
-  ::placeholder {
-    color: #808080;
-    font-size: 1rem;
-    font-style: italic;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background:linear-gradient(#fc3873,#eb8282);
+  height: 100vh;
+}
 
-  .todo__list--done{
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin: 4rem 0;
-    text-align: center;
-    
-  }
+.current__day, .current__date {
+  color: #eb8282;
+  align-self: start;
+  padding-bottom: 5px;
+  margin-left: 20px;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.pending__items, .completed__tasks {
+  color: white;
+  align-self: start;
+  margin-left: 48px;
+}
+
+.completed__tasks {
+  opacity: 0;
+}
+
+.list__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbd9d9;
+  width: 500px;
+  margin: auto;
+}
+
+h2 {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+
+}
+
+.list__header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: inline-flex;
+  justify-content: center;
+  width: 500px;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.input__field {
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  width: 70%;
+}
+
+.add__button {
+  width: 12%;
+  background: gray;
+  color:white;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  font-size: 3rem;
+  margin-left: 15px;
+}
+
+.add__button:hover {
+  background-color: rgb(87, 43, 247);
+}
+
+.buttons {
+  padding: 20px;
+}
+
+.show__button {
+  background: #eb8282;
+  color:black;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.clear__button {
+  background:#eb8282;
+  color:black;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.list, .list__completed {
+  width: 450px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list__completed {
+  pointer-events: none;
+  text-decoration: line-through;
+  opacity: 0;
+}
+
+.list__checkbox {
+  height: 18px;
+  width: 18px;
+  display: flex;
+  margin: 0 10px;
+}
+
+ul li {
+  cursor: pointer;
+  padding-top: 10px; 
+  padding-bottom: 10px;
+  background:#eb8282;
+  font-size: 1rem;
+  transition: all 0.5s;
+  opacity: 0;
+  user-select: none;
+  display: flex;
+}
+
+.close__button {    
+  text-align: center;
+  padding-top: 10px;
+  background-color: red;
+  color: white;
+  height: 30px;
+  width: 30px;
+  transition: all 1s;
+  opacity: 0;
+  flex: 10%;
+  margin-right: 10px;
   
-  .todoDiv,
-  .todo__list--doneDiv {
-    animation: todoDiv 0.7s;
-    background-color: rgb(183, 191, 204);
-    border-radius: 5px;
-    font-size: 1.5rem;
-    height: 48px;
-    margin: 1rem 0;
-    position: center;
-    
-  }
-  
-  .todoDoneDiv {
-    background-color: #eb8282;
-    text-decoration: line-through;
-  }
-  
-  @keyframes todoDiv {
-    0% {
-        left: 100px;
-    }
-  
-    100% {
-        left: 0px;
-    }
-  }
-  
-  .plus {
-    background-color: rgb(184, 184, 184);
-    border-radius: 5px;
-    color: white;
-    flex-grow: 1;
-    font-size: 2rem;
-    height: 2.5rem;
-  }
-  
-  .plus:hover {
-    background-color: rgb(87, 43, 247);
-  }
-    
-  .todo__footer {
-    text-align: center;
-  }
-  
-  .todo__footer button,
-  .todo__footer button:hover,
-  .todo__footer button:active,
-  .todo__footer button:visited {
-    background-color:#eb8282;
-    border: 0;
-    border-radius: 5px;
-    color: black;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 1rem;
-    text-decoration: none;
-  }
-  
+}
+
+.list__text {
+  flex: 80%;
+}
+
+.show {
+  opacity: 1;
+}
+
+ul li:hover {
+  background: #eb8282;
+
+}
